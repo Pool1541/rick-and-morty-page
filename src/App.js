@@ -1,24 +1,26 @@
-import logo from './logo.svg';
-import './App.css';
+import { useContext } from "react";
+import { PageContext } from "./context/pageContext";
+import Header from "./components/header";
+import Main from "./components/main";
+import Home from "./components/home";
+import Content from "./components/content";
+import Contact from "./components/contact";
 
 function App() {
+  const { currentPage } = useContext(PageContext);
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <Header />
+      <Main>
+        {currentPage === "Home" ? (
+          <Home />
+        ) : currentPage === "Search" ? (
+          <Content />
+        ) : currentPage === "Contact" ? (
+          <Contact />
+        ) : null}
+      </Main>
+    </>
   );
 }
 
