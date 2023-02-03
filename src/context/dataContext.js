@@ -31,7 +31,7 @@ export function DataContextProvider(props) {
       for (let i = 0; i < 3; i++) {
         try {
           const promise = await fetch(tempNextPage);
-          if (!promise.ok) setError(true);
+          // if (!promise.ok) setError(true);
           const data = await promise.json();
           const result = data;
           tempNextPage = result.info.next;
