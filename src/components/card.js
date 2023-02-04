@@ -1,6 +1,5 @@
 import styled from "styled-components";
 import StyledDiv from "./elements/div.elements";
-import { flicker } from "./elements/keyframes.elements";
 import { FaMapMarkerAlt } from "react-icons/fa";
 import StyledStatus from "./elements/status.elements";
 import { openModal } from "./modal/openModal";
@@ -76,7 +75,7 @@ export default function Card({ data }) {
   return (
     <StyledGridItem onClick={handleClick}>
       <StyledDiv>
-        <img src={data.image}></img>
+        <img src={data.image} alt={data.name}></img>
       </StyledDiv>
       <StyledDiv>
         <h3>{data.name}</h3>

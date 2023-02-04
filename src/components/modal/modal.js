@@ -92,20 +92,22 @@ export default function Modal({ root, info }) {
           <StyledDiv>
             <StyledTitle>
               <h2>{info.name}</h2>
-              <StyledParragraph>{"Human"}</StyledParragraph>
+              <StyledParragraph>{info.species}</StyledParragraph>
             </StyledTitle>
             <StyledParragraph as="div" characterData>
-              {"Alive"}
-              <StyledStatus status={"Alive"} />
+              {info.status}
+              <StyledStatus status={info.status} />
             </StyledParragraph>
             <StyledParragraph as="div">
               Last known location:
-              <StyledParragraph characterData>{"Desconocida"}</StyledParragraph>
+              <StyledParragraph characterData>
+                {info.location.name}
+              </StyledParragraph>
             </StyledParragraph>
             <StyledParragraph as="div">
               First seen in:
               <StyledParragraph characterData>
-                {"Earth (Replacement Dimension)"}
+                {info.origin.name}
               </StyledParragraph>
             </StyledParragraph>
           </StyledDiv>
