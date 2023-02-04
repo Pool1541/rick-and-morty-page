@@ -1,11 +1,6 @@
 import React, { lazy, Suspense } from "react";
 import { createRoot } from "react-dom/client";
-import styled from "styled-components";
-import StyledDiv from "../elements/div.elements";
-
-const StyledFallback = styled(StyledDiv)`
-  position: absolute;
-`;
+import Loading from "./loading";
 
 export function openModal(info) {
   const Modal = lazy(() => import("./modal"));
@@ -17,7 +12,7 @@ export function openModal(info) {
 
   const root = createRoot(modalDiv);
   root.render(
-    <Suspense fallback={<StyledFallback>Cargando...</StyledFallback>}>
+    <Suspense fallback={<Loading />}>
       <Modal root={root} info={info} />
     </Suspense>
   );
