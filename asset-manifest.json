@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.js": "/rick-and-morty-page/static/js/main.22c66862.js",
+    "main.js": "/rick-and-morty-page/static/js/main.71f5075c.js",
     "static/js/738.496cb70e.chunk.js": "/rick-and-morty-page/static/js/738.496cb70e.chunk.js",
     "static/js/213.103144a6.chunk.js": "/rick-and-morty-page/static/js/213.103144a6.chunk.js",
     "static/media/rick_sanchez.webp": "/rick-and-morty-page/static/media/rick_sanchez.4a5001c0611507c6628a.webp",
@@ -18,11 +18,11 @@
     "static/media/Calibre-Regular.woff2": "/rick-and-morty-page/static/media/Calibre-Regular.b0d4cbb1201155ddccc2.woff2",
     "static/media/Calibre-Medium.woff2": "/rick-and-morty-page/static/media/Calibre-Medium.568dce56f869a519a015.woff2",
     "index.html": "/rick-and-morty-page/index.html",
-    "main.22c66862.js.map": "/rick-and-morty-page/static/js/main.22c66862.js.map",
+    "main.71f5075c.js.map": "/rick-and-morty-page/static/js/main.71f5075c.js.map",
     "738.496cb70e.chunk.js.map": "/rick-and-morty-page/static/js/738.496cb70e.chunk.js.map",
     "213.103144a6.chunk.js.map": "/rick-and-morty-page/static/js/213.103144a6.chunk.js.map"
   },
   "entrypoints": [
-    "static/js/main.22c66862.js"
+    "static/js/main.71f5075c.js"
   ]
 }
