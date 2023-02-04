@@ -39,6 +39,7 @@ export function DataContextProvider(props) {
           const result = data;
           tempNextPage = result.info.next;
           tempCharacters = [...tempCharacters, ...result.results];
+          if (result.info.next === null) break;
         } catch (error) {}
       }
       setNextPage(tempNextPage);
