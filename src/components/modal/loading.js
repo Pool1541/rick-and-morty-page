@@ -14,7 +14,7 @@ const StyledFallback = styled(StyledDiv)`
   display: grid;
 `;
 
-const Portal = styled(StyledDiv)`
+export const Portal = styled(StyledDiv)`
   background-color: #66ba4f;
   box-shadow: 0px 0px 40px 10px #448c3f;
   height: 5rem;
