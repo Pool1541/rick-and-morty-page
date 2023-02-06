@@ -4,21 +4,30 @@ export const DataContext = createContext();
 
 export function DataContextProvider(props) {
   const [characters, setCharacters] = useState([]);
-  const [filter, setFilter] = useState("name");
+  const [filter, setFilter] = useState([]);
   const [error, setError] = useState(false);
-  const [value, setValue] = useState("");
+  const [name, setName] = useState("");
   const [recharge, setRecharge] = useState(false);
-  // const [page, setPage] = useState(1);
   const [nextPage, setNextPage] = useState("");
   function handleRecharge() {
     setRecharge(!recharge);
   }
 
-  function getValue(value) {
-    setValue(value);
+  function getValue(name, filters) {
+    setName(name);
     setRecharge(!recharge);
     setNextPage("");
     setCharacters([]);
+    setFilter(filters);
+  }
+
+  function linkConstructor() {
+    let result = "";
+    if (filter.length < 0) return result;
+    filter.forEach((element) => {
+      result = result.concat(`&${element[0]}=${element[1]}`);
+    });
+    return result;
   }
 
   useEffect(() => {
@@ -27,7 +36,7 @@ export function DataContextProvider(props) {
       let tempCharacters = [...characters];
       let tempNextPage =
         nextPage ||
-        `https://rickandmortyapi.com/api/character/?&${filter}=${value}`;
+        `https://rickandmortyapi.com/api/character/?&name=${name}${linkConstructor()}`;
       for (let i = 0; i < 3; i++) {
         try {
           const promise = await fetch(tempNextPage);
